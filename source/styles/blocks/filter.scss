@@ -1,0 +1,21 @@
+.filter__title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.filter__name {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+
+  &--light {
+    color: #bdbdbd;
+  }
+}
+
+.filter__button--light {
+  background-color: $secondary-background-color;
+  color: $secondary-color-text;
+}

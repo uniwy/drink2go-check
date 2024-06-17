@@ -1,0 +1,16 @@
+.catalog-card__link {
+  text-decoration: none;
+}
+
+.catalog-card__title {
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 700;
+  text-align: left;
+  color: $base-color-text;
+}
+
+.catalog-card__button {
+  font-size: inherit;
+  line-height: inherit;
+}

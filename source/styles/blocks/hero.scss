@@ -1,0 +1,32 @@
+.hero__title {
+  font-size: 36px;
+  line-height: 48px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.hero__desc {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $secondary-color-text;
+}
+
+.hero__last-price {
+  font-size: 16px;
+  line-height: 32px;
+  text-decoration: line-through;
+  text-align: left;
+  color: $secondary-color-text;
+}
+
+.hero__price {
+  font-size: 20;
+  line-height: 32px;
+  font-weight: 600;
+  color: $base-color-text;
+}

@@ -1,0 +1,9 @@
+@mixin font-face($font-weight, $font-src) {
+  @font-face {
+    font-family: "Montserrat";
+    font-weight: $font-weight;
+    font-style: normal;
+    src: $font-src;
+    font-display: swap;
+  }
+}
