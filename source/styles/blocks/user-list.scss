@@ -1,0 +1,33 @@
+.user-list {
+  display: flex;
+}
+
+.user-list__item {
+  width: 40px;
+  height: 40px;
+}
+
+.user-list__login {
+  padding: 8px;
+
+  background-image: url("../../icons/stack.svg#user");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.user-list__basket {
+  padding: 8px;
+
+
+  background-image: url("../../icons/stack.svg#basket");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: none;
+}

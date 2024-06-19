@@ -5,4 +5,16 @@
   background-color: $base-background-color;
   color: $secondary-background-color;
   text-decoration: none;
+
+  &:hover {
+    background-color: #9070ec;
+  }
+
+  &:active {
+    background-color: #593cac;
+  }
+
+  &:disabled {
+    background-color: #bdbdbd;
+  }
 }

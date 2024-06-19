@@ -7,4 +7,42 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #bdbdbd;
+
+  &:hover {
+    color: $secondary-color-text;
+  }
+
+  &:focus {
+    color: $secondary-color-text;
+  }
+
+  &:active {
+    color: #593cac;
+  }
+}
+
+.copyright__image {
+  display: block;
+  width: 12px;
+  height: 16px;
+  background-color: #bdbdbd;
+
+  &--logo {
+    mask-image: url("../../icons/stack.svg#logo_html_academy");
+  }
+
+  &:hover {
+    color: $secondary-color-text;
+  }
+
+  &:focus {
+    color: $secondary-color-text;
+  }
+
+  &:active {
+    color: #593cac;
+  }
 }

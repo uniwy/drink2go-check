@@ -1,4 +1,10 @@
+.contacts__container {
+  margin-bottom: 41px;
+}
+
 .contacts__title {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -7,9 +13,42 @@
 }
 
 .contacts__address {
+  position: relative;
+  margin-bottom: 16px;
+  margin-left: 19px;
   font-style: normal;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../icons/stack.svg#address");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 3px;
+    left: -19px;
+  }
 }
 
 .contacts__phone {
+  position: relative;
+  margin-left: 19px;
   font-style: normal;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 16px;
+    background-image: url("../../icons/stack.svg#phone");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 3px;
+    left: -19px;
+  }
 }

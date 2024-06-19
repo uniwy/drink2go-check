@@ -1,8 +1,35 @@
+.filter {
+  margin-bottom: 30px;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .filter__title {
+  margin-bottom: 20px;
+  padding: 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   text-align: left;
+}
+
+.filter__range-wrapper-inputs {
+  margin-bottom: 30px;
+}
+
+.filter__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter__item {
+  margin-bottom: 20px;
+}
+
+.filter__item:last-child {
+  margin-bottom: 30px;
 }
 
 .filter__name {
@@ -13,6 +40,21 @@
   &--light {
     color: #bdbdbd;
   }
+}
+
+.filter__group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 44px;
+}
+
+.filter__button {
+  width: 280px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 20px;
+  border: none;
 }
 
 .filter__button--light {

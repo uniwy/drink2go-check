@@ -1,4 +1,23 @@
+.features__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 36px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
 .features__article {
+  margin-top: 0;
+  margin-bottom: 4px;
+  order: -1;
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
@@ -8,16 +27,97 @@
   color: $secondary-color-text;
 }
 
-.features__title {
-  font-size: 24px;
-  line-height: 36px;
+.features__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.features__item {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+  }
+}
+
+.features__item--speed {
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#speed");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    left: 120px;
+    flex-shrink: 0;
+  }
+}
+
+.features__item--fit {
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#fit");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    left: 120px;
+    flex-shrink: 0;
+  }
+}
+
+.features__item--energy {
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#energy");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    left: 120px;
+    flex-shrink: 0;
+  }
+}
+
+.features__item--eco {
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../../icons/stack.svg#eco");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    top: 0;
+    left: 120px;
+    flex-shrink: 0;
+  }
+}
+
+.features__caption {
+  margin: 0;
+  padding-top: 66px;
+  padding-bottom: 4px;
+  font-size: 18px;
+  line-height: 32px;
   font-weight: 700;
   text-align: center;
 }
 
-.features__caption {
-  font-size: 18px;
-  line-height: 32px;
-  font-weight: 700;
+.features__description {
+  margin: 0;
   text-align: center;
 }

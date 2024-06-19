@@ -13,16 +13,18 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header">
-      <a class="logo" href="index.html">
-        <picture>
-          <source width="170" height="36" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo_desktop.svg">
-          <source width="82" height="36" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo_tablet.svg">
-          <img class="logo__image" src="images/logo_mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
-        </picture>
-      </a>
-      <nav class="main-nav">
+    <header class="header container">
+      <div class="header-container">
+        <a class="logo" href="index.html">
+          <picture>
+            <source width="170" height="36" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo_desktop.svg">
+            <source width="82" height="36" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo_tablet.svg">
+            <img class="logo__image" src="images/logo_mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
+          </picture>
+        </a>
 
+      </div>
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
            <li class="site-list__item">
@@ -45,28 +47,31 @@
               </a>
             </li>
             <li class="user-list__item">
-              <a class="user-list__link" href="#">
+              <a class="user-list__basket" href="#">
                 <span class="visually-hidden">Корзина</span>
               </a>
             </li>
           </ul>
+          <button class="logo__toggle logo__toggle--closed" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
         </div>
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
+
       </nav>
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Drink2Go — интернет-магазин по продаже кофейных напитков.</h1>
       <section class="hero">
-        <div class="hero__wrapper">
+        <div class="hero__wrapper container">
           <h2 class="hero__title">Декаф Флэт Уайт</h2>
             <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
             <span class="hero__desc">Новинка!</span>
-            <p class="hero__last-price">295₽</p>
-            <p class="hero__price">225₽</p>
-            <a class="hero__button button" href="#">Заказать</a>
-            <a class="hero__image">
+            <div class="hero__sum">
+              <p class="hero__last-price">295₽</p>
+              <p class="hero__price">225₽</p>
+              <a class="hero__button button" href="#">Заказать</a>
+            </div>
+              <a class="hero__image">
               <picture>
                 <source type="image/png" width="600" height="600" media="(min-width: 1440px)" srcset="images/hero/can_flat_white_tablet@1x.png 1x, images/hero/can_flat_white_tablet@2x.png 2x" >
                 <source type="image/png" width="476" height="476" media="(min-width: 768px)" srcset="images/hero/can_flat_white_tablet@1x.png 1x, images/hero/can_flat_white_tablet@2x.png 2x">
@@ -88,7 +93,7 @@
             </li>
             <li class="features__item features__item--fit">
               <h4 class="features__caption">Удобство</h4>
-              <p class="features__description">Легко помещается и в карман, и в маленькую сумочку</p>
+              <p class="features__description">Легко помещается и в карман,<br>и в маленькую сумочку</p>
             </li>
             <li class="features__item features__item--energy">
               <h4 class="features__caption">Бодрость</h4>
@@ -96,14 +101,14 @@
             </li>
             <li class="features__item features__item--eco">
               <h4 class="features__caption">Экологичность</h4>
-              <p class="features__description">Вся упаковка сделана из перерабатываемых материалов</p>
+              <p class="features__description">Вся упаковка сделана<br>из перерабатываемых материалов</p>
             </li>
           </ul>
         </div>
       </section>
 
-      <section class="catalog container">
-        <div class="catalog__wrapper">
+      <section class="catalog">
+        <div class="catalog__wrapper container">
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <h3 class="catalog__article">Каталог</h3>
 
@@ -214,6 +219,16 @@
                </fieldset>
             </form>
 
+            <div class="sort">
+              <h2 class="sort__title">Сортировка:</h2>
+
+              <select class="select-control" aria-label="Сортировка">
+                <option value="default">по умолчанию</option>
+                <option value="popular">Сначала популярное</option>
+                <option value="expensive">Сначала дорогое</option>
+              </select>
+            </div>
+
             <div class="catalog-card">
               <ul class="catalog-card__list">
                 <li class="catalog-card__item">
@@ -227,8 +242,8 @@
                       <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
                     </a>
                     <p class="catalog-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="catalog-card__item item">
-                      <p class="item__desc">225₽</p>
+                    <div class="catalog-card__price price">
+                      <p class="price__desc">225₽</p>
                       <a class="catalog-card__button button" href="form.html">В корзину</a>
                     </div>
                   </div>
@@ -244,8 +259,8 @@
                       <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
                     </a>
                     <p class="catalog-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="catalog-card__item item">
-                      <p class="item__desc">225₽</p>
+                    <div class="catalog-card__price price">
+                      <p class="price__desc">225₽</p>
                       <a class="catalog-card__button button" href="form.html">В корзину</a>
                     </div>
                   </div>
@@ -261,8 +276,8 @@
                       <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
                     </a>
                     <p class="catalog-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="catalog-card__item item">
-                      <p class="item__desc">225₽</p>
+                    <div class="catalog-card__price price">
+                      <p class="price__desc">225₽</p>
                       <a class="catalog-card__button button" href="form.html">В корзину</a>
                     </div>
                   </div>
@@ -278,8 +293,8 @@
                       <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
                     </a>
                     <p class="catalog-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="catalog-card__item item">
-                      <p class="item__desc">225₽</p>
+                    <div class="catalog-card__price price">
+                      <p class="price__desc">225₽</p>
                       <a class="catalog-card__button button" href="form.html">В корзину</a>
                     </div>
                   </div>
@@ -295,8 +310,8 @@
                       <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
                     </a>
                     <p class="catalog-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="catalog-card__item item">
-                      <p class="item__desc">225₽</p>
+                    <div class="catalog-card__price price">
+                      <p class="price__desc">225₽</p>
                       <a class="catalog-card__button button" href="form.html">В корзину</a>
                     </div>
                   </div>
@@ -312,8 +327,8 @@
                       <h3 class="catalog-card__title">Декаф Флэт Уайт</h3>
                     </a>
                     <p class="catalog-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
-                    <div class="catalog-card__item item">
-                      <p class="item__desc">225₽</p>
+                    <div class="catalog-card__price price">
+                      <p class="price__desc">225₽</p>
                       <a class="catalog-card__button button" href="form.html">В корзину</a>
                     </div>
                   </div>
@@ -323,8 +338,8 @@
 
           </div>
           <ul class="pagination">
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--color" href="#">Назад</a>
+            <li class="pagination__item pagination__item--back">
+              <a class="pagination__link pagination__link--color pagination__link--back" href="#">Назад</a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--color" href="#">1</a>
@@ -335,8 +350,8 @@
             <li class="pagination__item">
               <a class="pagination__link pagination__link--color" href="#">3</a>
             </li>
-            <li class="pagination__item">
-              <a class="pagination__link pagination__link--color" href="#">Вперёд</a>
+            <li class="pagination__item pagination__item--next">
+              <a class="pagination__link pagination__link--color pagination__link--next" href="#">Вперёд</a>
             </li>
           </ul>
 
@@ -346,41 +361,45 @@
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
         <picture>
-          <img alt="Карта">
+          <source width="1440" height="540" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map/map_desktop@1x.jpeg 1x, images/map/map_desktop@2x.jpeg 2x">
+          <source width="768" height="480" type="image/jpeg" media="(min-width: 768px)" srcset="images/map/map_tablet@1x.jpeg 1x, images/map/map_tablet@2x.jpeg 2x">
+          <img class="map__image" src="images/map/map_mobile@1x.jpeg" srcset="images/map/map_mobile@2x.jpeg 2x" width="320" height="420" alt="Адрес на карте Санкт-Петербурга.">
         </picture>
       </section>
     </main>
 
     <footer class="main-footer">
       <div class="main-footer__wrapper container">
-        <div class="main-footer__logo">
-          <a class="logo" href="index.html">
-            <picture>
-              <source width="170" height="36" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo_desktop.svg">
-              <source width="82" height="36" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo_tablet.svg">
-              <img class="logo__image" src="images/logo_mobile.svg" width="32" height="36" alt="Логотип Drink2Go.">
-            </picture>
-          </a>
-        </div>
-        <div class="main-footer__social social">
-          <h2 class="visually-hidden">Социальные сети.</h2>
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="#">
-                <span class="visually-hidden">vk</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--pinterest" href="#">
-                <span class="visually-hidden">pinterest</span>
-              </a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--odnoklassniki" href="#">
-                <span class="visually-hidden">ok</span>
-              </a>
-            </li>
-          </ul>
+        <div class="main-footer__header">
+          <div class="main-footer__logo">
+            <a class="logotype" href="index.html">
+              <picture>
+                <source width="170" height="36" type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo_desktop.svg">
+                <source width="82" height="36" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo_desctop.svg">
+                <img class="logotype__image" src="images/logo_tablet.svg" width="82" height="36" alt="Логотип Drink2Go.">
+              </picture>
+            </a>
+          </div>
+          <div class="main-footer__social social">
+            <h2 class="visually-hidden">Социальные сети.</h2>
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="#">
+                  <span class="visually-hidden">vk</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--pinterest" href="#">
+                  <span class="visually-hidden">pinterest</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--odnoklassniki" href="#">
+                  <span class="visually-hidden">ok</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div class="main-footer__menu menu">

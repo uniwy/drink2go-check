@@ -1,12 +1,47 @@
+.hero {
+  background-color: #f3ebe1;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
 .hero__title {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 36px;
   line-height: 48px;
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.02em;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 20px;
+    background-image: url("../../icons/stack.svg#arrow");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 7px;
+    left: 0;
+  }
+}
+
+.hero__description {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .hero__desc {
+  margin-bottom: 4px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 700;
@@ -14,9 +49,18 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $secondary-color-text;
+  order: -1;
+}
+
+.hero__sum {
+  display: flex;
+  flex-direction: row;
 }
 
 .hero__last-price {
+  margin-top: 4px;
+  margin-left: 25px;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 32px;
   text-decoration: line-through;
@@ -25,8 +69,25 @@
 }
 
 .hero__price {
+  margin-left: 6px;
+  margin-right: 20px;
+  margin-top: 4px;
+  margin-bottom: 0;
   font-size: 20;
   line-height: 32px;
   font-weight: 600;
   color: $base-color-text;
+}
+
+.hero__button {
+  width: 113px;
+  height: 40px;
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin-right: 45px;
+}
+
+.hero__image {
+  margin-bottom: 10px;
+  order: -2;
 }

@@ -1,0 +1,78 @@
+.social__list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap ;
+  gap: 20px;
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: -70px;
+    background-color: #d9d9d9;
+  }
+}
+
+.social__item {
+  display: block;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+
+/*
+  display: block;
+  box-sizing: border-box;
+  min-width: 40px;
+  min-height: 40px;
+
+  border-radius: 4px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $secondary-background-color;*/
+}
+
+.social__item:last-child {
+  margin-right: 0;
+}
+
+.social__link {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #bdbdbd;
+
+  &--vkontakte {
+    mask-image: url("../../icons/stack.svg#vk");
+  }
+
+  &--pinterest {
+    width: 22px;
+    height: 22px;
+    mask-image: url("../../icons/stack.svg#pinterest");
+  }
+
+  &--odnoklassniki {
+    mask-image: url("../../icons/stack.svg#ok");
+  }
+
+  &:hover {
+    background-color: $base-background-color;
+  }
+
+  &:focus {
+    background-color: $base-background-color;
+  }
+
+  &:active {
+    background-color: $base-background-color;
+  }
+}
