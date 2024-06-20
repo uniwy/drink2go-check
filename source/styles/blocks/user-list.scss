@@ -3,31 +3,46 @@
 }
 
 .user-list__item {
-  width: 40px;
-  height: 40px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: $tablet-width) {
+    height: 80px;
+  }
 }
 
 .user-list__login {
-  padding: 8px;
-
+  position: absolute;
+  width: 16px;
+  height: 16px;
   background-image: url("../../icons/stack.svg#user");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #ffffff;
   cursor: pointer;
-  border: none;
+  top: 22px;
+  left: 22px;
+
+  @media (min-width: $tablet-width) {
+    top: 32px;
+  }
 }
 
 .user-list__basket {
-  padding: 8px;
-
-
+  position: absolute;
+  width: 16px;
+  height: 16px;
   background-image: url("../../icons/stack.svg#basket");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #ffffff;
+
   cursor: pointer;
-  border: none;
+  top: 22px;
+  left: 22px;
+
+  @media (min-width: $tablet-width) {
+    top: 32px;
+  }
 }

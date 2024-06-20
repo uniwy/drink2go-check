@@ -1,21 +1,106 @@
 .filter {
-  margin-bottom: 30px;
   border: none;
   padding: 0;
   margin: 0;
 }
 
 .filter__title {
-  margin-bottom: 20px;
   padding: 0;
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
   text-align: left;
+
+  &--price {
+    margin-bottom: 30px;
+  }
+
+  &--product {
+    margin-bottom: 20px;
+  }
+
+  &--add {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__range-scale {
+  position: relative;
+  margin-bottom: 34px;
+  height: 4px;
+  background-color: #e2e2e2;
+}
+
+.filter__range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #9070ec;
+  width: 240px;
+}
+
+.filter__range-toggle {
+  position: absolute;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  border: 2px solid #9070ec;
+  cursor: pointer;
+}
+
+.filter__range-toggle:active {
+  border-radius: 5px;
+  outline: 2px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -10px;
+}
+
+.toggle-max {
+  top: -10px;
+  right: 20px;
 }
 
 .filter__range-wrapper-inputs {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 30px;
+}
+
+.filter__input {
+  box-sizing: border-box;
+  padding: 8px 10px;
+  width: 118px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: #bdbdbd;
+  border: 2px solid #9070ec;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  &--max {
+    color: #333333;
+  }
+}
+
+.filter__price-min {
+  position: relative;
+}
+
+.filter__line:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 2px;
+  background-color: #bdbdbd;
+  left: 134px;
+  top: 20px;
 }
 
 .filter__list {
@@ -32,14 +117,114 @@
   margin-bottom: 30px;
 }
 
+.filter__control {
+  position: relative;
+  padding-left: 34px;
+
+  &--active {
+    background-color: #7859cf;
+  }
+}
+
+.filter__circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: -4px;
+  border-radius: 50%;
+  border: 2px solid #bdbdbd;
+  background: #ffffff;
+  cursor: pointer;
+
+  &--active {
+    border: 2px solid #7859cf;
+  }
+
+  &--light {
+    border: 2px solid #e2e2e2;
+  }
+}
+
+.filter__input[type="radio"]:checked + .filter__circle::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #7859cf;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .filter__name {
   font-size: 16px;
   line-height: 24px;
   text-align: left;
 
+  &--country {
+    margin-left: 18px;
+    width: 160px;
+  }
+
   &--light {
     color: #bdbdbd;
+    border-radius: 12px;
   }
+}
+
+.filter__mark {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+
+  &--active {
+    background-color: #7859cf;
+    border-radius: 12px;
+  }
+
+  &--light {
+    background-color: #e2e2e2;
+    border-radius: 12px;
+  }
+}
+
+.filter__mark::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 2px;
+  left: 2px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.filter__mark--active::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 2px;
+  left: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.filter__control--form {
+  display: inline-block;
+  position: relative;
+
+  width: 42px;
+  height: 24px;
+  background-color: #bdbdbd;
+  border-radius: 12px;
 }
 
 .filter__group {
@@ -52,6 +237,7 @@
 .filter__button {
   width: 280px;
   height: 40px;
+  font-size: 18px;
   border-radius: 4px;
   padding: 8px 20px;
   border: none;

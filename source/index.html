@@ -117,7 +117,7 @@
               <form class="catalog-filter__form" action="https://echo.htmlacademy.ru/" method="get">
 
                 <fieldset class="filter">
-                  <legend class="filter__title">Цена</legend>
+                  <legend class="filter__title filter__title--price">Цена</legend>
                   <div class="filter__range">
                     <div class="filter__range-scale">
                       <div class="filter__range-bar">
@@ -130,22 +130,22 @@
                     <div class="filter__range-wrapper-inputs">
                       <label class="filter__price-min">
                         <input class="filter__input" type="number" name="appointment-price-from" value="0">
-                        <span>-</span>
+                        <span class="filter__line"></span>
                       </label>
                       <label class="filter__price-max">
-                        <input class="filter__input" type="number" name="appointment-price-to" value="90">
+                        <input class="filter__input filter__input--max" type="number" name="appointment-price-to" value="900">
                       </label>
                     </div>
                   </div>
                 </fieldset>
 
                 <fieldset class="filter">
-                  <legend class="filter__title">Наличие молока</legend>
+                  <legend class="filter__title filter__title--product">Наличие молока</legend>
                   <ul class="filter__list">
                     <li class="filter__item">
                       <label class="filter__control">
                         <input class="visually-hidden filter__input" type="radio" name="product-group" value="not-matter" checked>
-                        <span class="filter__circle"></span>
+                        <span class="filter__circle filter__circle--active"></span>
                         <span class="filter__name">Неважно</span>
                       </label>
                     </li>
@@ -166,7 +166,7 @@
                     <li class="filter__item">
                       <label class="filter__control">
                         <input class="visually-hidden filter__input" type="radio" name="product-group" value="not-milk">
-                        <span class="filter__circle"></span>
+                        <span class="filter__circle filter__circle--light"></span>
                         <span class="filter__name filter__name--light">Без молока</span>
                       </label>
                     </li>
@@ -179,36 +179,36 @@
                    <li class="filter__item filter__item--add">
                      <label class="filter__control filter__control--form">
                        <input class="visually-hidden filter__input" type="checkbox" name="Brazil" checked>
-                       <span class="filter__mark"></span>
-                       <span class="filter__name">Бразилия</span>
+                       <span class="filter__mark filter__mark--active"></span>
+                       <span class="filter__name filter__name--country">Бразилия</span>
                      </label>
                    </li>
                    <li class="filter__item filter__item--add">
                      <label class="filter__control filter__control--form">
                        <input class="visually-hidden filter__input" type="checkbox" name="Ethiopia">
                        <span class="filter__mark"></span>
-                       <span class="filter__name">Эфиопия</span>
+                       <span class="filter__name filter__name--country">Эфиопия</span>
                      </label>
                    </li>
                    <li class="filter__item filter__item--add">
                      <label class="filter__control filter__control--form">
                        <input class="visually-hidden filter__input" type="checkbox" name="Colombia">
                        <span class="filter__mark"></span>
-                       <span class="filter__name">Колумбия</span>
+                       <span class="filter__name filter__name--country">Колумбия</span>
                      </label>
                    </li>
                    <li class="filter__item filter__item--add">
                      <label class="filter__control filter__control--form">
                        <input class="visually-hidden filter__input" type="checkbox" name="Costa Rica">
                        <span class="filter__mark"></span>
-                       <span class="filter__name">Коста-Рика</span>
+                       <span class="filter__name filter__name--country">Коста_Рика</span>
                      </label>
                    </li>
                    <li class="filter__item filter__item--add">
                     <label class="filter__control filter__control--form">
                       <input class="visually-hidden filter__input" type="checkbox" name="Peru">
-                      <span class="filter__mark"></span>
-                      <span class="filter__name filter__name--light">Перу</span>
+                      <span class="filter__mark filter__mark--light"></span>
+                      <span class="filter__name filter__name--country filter__name--light">Перу</span>
                     </label>
                   </li>
                  </ul>
@@ -339,7 +339,8 @@
           </div>
           <ul class="pagination">
             <li class="pagination__item pagination__item--back">
-              <a class="pagination__link pagination__link--color pagination__link--back" href="#">Назад</a>
+              <span class="pagination__icon">Назад</span>
+              <a class="pagination__link pagination__link--color pagination__link--back" href="#"></a>
             </li>
             <li class="pagination__item">
               <a class="pagination__link pagination__link--color" href="#">1</a>
@@ -351,7 +352,8 @@
               <a class="pagination__link pagination__link--color" href="#">3</a>
             </li>
             <li class="pagination__item pagination__item--next">
-              <a class="pagination__link pagination__link--color pagination__link--next" href="#">Вперёд</a>
+              <span class="pagination__icon">Вперёд</span>
+              <a class="pagination__link pagination__link--color pagination__link--next" href="#"></a>
             </li>
           </ul>
 

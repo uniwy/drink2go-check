@@ -7,6 +7,10 @@
   flex-direction: column;
   padding-top: 20px;
   padding-bottom: 60px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 60px;
+  }
 }
 
 .hero__title {
@@ -19,18 +23,40 @@
   text-align: center;
   letter-spacing: 0.02em;
 
+    @media (min-width: $tablet-width) {
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 80px;
+      margin-bottom: 16px;
+    }
+
   &::after {
     content: "";
     display: block;
-    width: 11px;
+    width: 20px;
     height: 20px;
     background-image: url("../../icons/stack.svg#arrow");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     position: absolute;
-    top: 7px;
-    left: 0;
+    top: -12px;
+    left: -18px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../../icons/stack.svg#arrow");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: -12px;
+    right: -18px;
+    transform: rotate(180deg);
   }
 }
 
@@ -38,6 +64,14 @@
   margin-top: 0;
   margin-bottom: 20px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32px;
+    width: 608px;
+    margin: 0 auto 20px;
+  }
 }
 
 .hero__desc {
@@ -50,15 +84,26 @@
   text-transform: uppercase;
   color: $secondary-color-text;
   order: -1;
+
+  @media (min-width: $tablet-width) {
+    order: -3;
+    margin-bottom: 4px;
+  }
 }
 
 .hero__sum {
   display: flex;
   flex-direction: row;
+
+  @media (min-width: $tablet-width) {
+    justify-content: center;
+    margin-right: 24px;
+    margin-bottom: 20px;
+  }
 }
 
 .hero__last-price {
-  margin-top: 4px;
+  margin-top: 5px;
   margin-left: 25px;
   margin-bottom: 0;
   font-size: 16px;
@@ -84,10 +129,14 @@
   height: 40px;
   border-radius: 4px;
   padding: 8px 20px;
-  margin-right: 45px;
 }
 
 .hero__image {
   margin-bottom: 10px;
   order: -2;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;;
+    order: 3;
+  }
 }

@@ -1,3 +1,28 @@
+.site-list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
+
 .site-list__item {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+    width: 103px;
+    height: 80px;
+  }
+}
+
+.site-list__link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  color: $base-color-text;
 }
