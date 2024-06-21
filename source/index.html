@@ -13,7 +13,7 @@
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
-    <header class="header container">
+    <header class="header container" data-test="header">
       <div class="header__container">
         <a class="logo" href="index.html">
           <picture>
@@ -62,7 +62,7 @@
     </header>
     <main class="main-container">
       <h1 class="visually-hidden">Drink2Go — интернет-магазин по продаже кофейных напитков.</h1>
-      <section class="hero">
+      <section class="hero" data-test="hero">
         <div class="hero__wrapper container">
           <h2 class="hero__title">Декаф Флэт Уайт</h2>
             <p class="hero__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
@@ -82,7 +82,7 @@
         </div>
       </section>
 
-      <section class="features">
+      <section class="features" data-test="features">
         <div class="features__wrapper container">
           <h2 class="features__title">Главные причины выбрать Drink2Go</h2>
           <h3 class="features__article">Преимущества</h3>
@@ -108,7 +108,7 @@
         </div>
       </section>
 
-      <section class="catalog">
+      <section class="catalog" data-test="catalog">
         <div class="catalog__wrapper container">
           <h2 class="catalog__title">Каталог кофейных напитков</h2>
           <h3 class="catalog__article">Каталог</h3>
@@ -361,7 +361,7 @@
         </div>
       </section>
 
-      <section class="map">
+      <section class="map" data-test="map">
         <h2 class="visually-hidden">Карта</h2>
         <picture>
           <source width="1440" height="540" type="image/jpeg" media="(min-width: 1440px)" srcset="images/map/map_desktop@1x.jpeg 1x, images/map/map_desktop@2x.jpeg 2x">
@@ -371,7 +371,7 @@
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer" data-test="footer">
       <div class="main-footer__wrapper container">
         <div class="main-footer__header">
           <div class="main-footer__logo">

@@ -53,17 +53,17 @@
   text-align: center;
   letter-spacing: 0.02em;
 
-    @media (min-width: $tablet-width) {
-      font-size: 56px;
-      font-weight: 700;
-      line-height: 80px;
-      margin-bottom: 16px;
-    }
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
 
-    @media (min-width: $desktop-width) {
-      text-align: right;
-      padding-right: 125px;
-    }
+  @media (min-width: $desktop-width) {
+    text-align: right;
+    padding-right: 125px;
+  }
 
   &::after {
     content: "";
@@ -184,10 +184,7 @@
 }
 
 .hero__price {
-  margin-left: 6px;
-  margin-right: 20px;
-  margin-top: 4px;
-  margin-bottom: 0;
+  margin: 4px 20px 0 6px;
   font-size: 20;
   line-height: 32px;
   font-weight: 600;
@@ -207,7 +204,7 @@
   order: -2;
 
   @media (min-width: $tablet-width) {
-    margin: 0 auto;;
+    margin: 0 auto;
     order: 3;
   }
 
