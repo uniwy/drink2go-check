@@ -7,6 +7,11 @@
   @media (min-width: $tablet-width) {
     margin-top: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    margin-bottom: 120px;
+  }
 }
 
 .features__title {
@@ -54,12 +59,14 @@
     display: grid;
     grid-template-columns: 339px 339px;
     gap: 30px;
+    row-gap: 50px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 318px 317px 318px 317px;
     gap: 30px;
+
   }
 }
 
@@ -72,8 +79,6 @@
     width: 52px;
     height: 56px;
   }
-
-
 }
 
 .features__item--speed {
@@ -88,6 +93,16 @@
     left: 50%;
     transform: translate(-50%);
     flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 
@@ -103,6 +118,16 @@
     left: 50%;
     transform: translate(-50%);
     flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 
@@ -118,6 +143,16 @@
     left: 50%;
     transform: translate(-50%);
     flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 
@@ -133,6 +168,16 @@
     left: 50%;
     transform: translate(-50%);
     flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      left: 26px;
+      top: 3px;
+    }
+
+    @media (min-width: $desktop-width) {
+      left: 50%;
+      transform: translate(-50%);
+    }
   }
 }
 
@@ -145,9 +190,38 @@
   line-height: 32px;
   font-weight: 700;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 72px;
+    padding-top: 0;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    padding-top: 76px;
+    padding-bottom: 10px;
+    text-align: center;
+
+  }
 }
 
 .features__description {
   margin: 0;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 0;
+    text-align: center;
+  }
 }

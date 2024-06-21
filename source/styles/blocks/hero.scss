@@ -1,5 +1,29 @@
 .hero {
+  position: relative;
   background-color: #f3ebe1;
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 249px;
+      background-color: $secondary-background-color;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .hero__wrapper {
@@ -10,6 +34,12 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding-top: 180px;
+    min-height: 714px;
   }
 }
 
@@ -30,6 +60,11 @@
       margin-bottom: 16px;
     }
 
+    @media (min-width: $desktop-width) {
+      text-align: right;
+      padding-right: 125px;
+    }
+
   &::after {
     content: "";
     display: block;
@@ -42,6 +77,16 @@
     position: absolute;
     top: -12px;
     left: -18px;
+
+    @media (min-width: $tablet-width) {
+      top: 230px;
+      left: 1px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 147px;
+      left: -8px;
+    }
   }
 
   &::before {
@@ -57,6 +102,16 @@
     top: -12px;
     right: -18px;
     transform: rotate(180deg);
+
+    @media (min-width: $tablet-width) {
+      top: 230px;
+      right: 1px;
+    }
+
+    @media (min-width: $tablet-width) {
+      top: 147px;
+      right: -8px;
+    }
   }
 }
 
@@ -71,6 +126,13 @@
     line-height: 32px;
     width: 608px;
     margin: 0 auto 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    width: 625px;
   }
 }
 
@@ -89,6 +151,10 @@
     order: -3;
     margin-bottom: 4px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 104px;
+  }
 }
 
 .hero__sum {
@@ -99,6 +165,10 @@
     justify-content: center;
     margin-right: 24px;
     margin-bottom: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: 260px;
   }
 }
 
@@ -132,11 +202,18 @@
 }
 
 .hero__image {
+  position: relative;
   margin-bottom: 10px;
   order: -2;
 
   @media (min-width: $tablet-width) {
     margin: 0 auto;;
     order: 3;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    top: 30px;
+    left: 65px;
   }
 }
